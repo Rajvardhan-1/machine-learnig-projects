@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<style>
+  /* Style for the slider */
+  input[type="range"] {
+    width: 300px;
+  }
+
+  /* Style for the text element */
+  #sliderValue {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+  }
+</style>
+
+<form>
+  <label for="slider">Slider:</label>
+  <input type="range" id="slider" name="slider" min="0" max="100" step="1" oninput="updateText(this.value)">
+  <p id="sliderValue">Slider Value: 0</p>
+</form>
+
+<script>
+  function updateText(value) {
+    document.getElementById('sliderValue').textContent = 'Slider Value: ' + value;
+  }
+</script>
+
+
+</html>
